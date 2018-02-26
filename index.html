@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/design.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+    <title>Duddleswell Tea Rooms</title>
+    <style>
+        .sitemast {
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 100%;
+            grid-template-areas:
+                "sitetitle";
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        h2 {
+            display: block;
+            font-size: 1.5em;
+            -webkit-margin-before: 0.83em;
+            -webkit-margin-after: 0.83em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        /*.standout {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }*/
+        
+        .standout3 {
+            width: 500px;
+            left: 50%;
+            right:50%;
+            height: 100px;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.7);
+            margin: 0 0 0 -350px;
+            padding: 30px 55px 10px 55px;
+            position: absolute;
+            bottom: 0;
+        }
+        
+        .standout2 {
+            position:absolute;
+            left: 50%;
+            right:50%;
+            top: 490px;
+            /*bottom: auto;*/
+            bottom: auto;
+            z-index: 2;
+            margin: 0 0 0 -350px;
+            /*padding: 30px 55px 10px 55px;*/
+            /*background-color: #ddd;*/
+            background-color:floralwhite;
+            /*background: rgba(255, 255, 255, 0.7);*/
+            width: 600px;
+        }
+        
+        /*#Container {
+    width: 500px;
+    height: 600px;
+    position: relative;
+    background: #ccc
+}
+
+#TheElement {
+    width: 500px;
+    height: 100px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}*/
+        
+        .container1 {
+            /*position:relative;*/
+            width: 100%;
+            background-color: crimson;
+            /*height:auto;*/
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 20% 20% 20% 20% auto;
+            grid-template-areas:
+                /*". . . . ."*/
+                "opening-times opening-times opening-times opening-times opening-times"
+                "header header header header header";
+        }
+        
+        /*.focus {
+            grid-area: focus;
+            text-align: center;
+            margin-top: 140px;
+        }*/
+        
+        .opening-times {
+            grid-area:opening-times;
+        }
+        
+        .header {
+            grid-area:header;
+        }
+        
+        .sitetitle {
+            grid-area:sitetitle;
+        }
+        
+        .sitetitle-mob {
+            grid-area:sitetitle-mob;
+        }
+        
+        
+        
+        .message {
+            grid-area: message;
+        }
+              
+        /*.message {
+            grid-area: article2;
+            column-gap: 65px;
+            column-count: 2;
+        }*/
+       
+        
+        
+        .whitebg {
+            /*margin-top: 645.5px;*/
+            margin-top: 600px;
+            padding: 50px 0;
+            /*background-color: #ddd;*/
+            background-color:floralwhite;
+            /*background: rgba(255, 255, 255, 0);*/
+        }
+        
+        .container2 {
+            width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: "instagram-logo instagram-logo"
+            "instagram-feed instagram-feed";
+        }
+        
+        .container3 {
+            width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: "img1 text1";
+        }
+        
+        .container4 {
+            width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: "img2 text2";
+        }
+        
+        .standout-text-tablet-mob {
+               display:none;
+            }
+        
+        .img1 {
+            grid-area: img1;
+        }
+        
+        .img2 {
+            grid-area: img2;
+        }
+        
+        .text1 {
+            grid-area: text1;
+            color: #333;
+        }
+        
+        .text2 {
+            grid-area: text2;
+            color: #333;
+        }
+        
+        
+        .dogs-welcome-img {
+            grid-area: dogs-welcome-img;
+        }
+        
+        /*.text1 {
+            grid-area: text1;
+            /*column-gap: 65px;
+            column-count: 2;
+        }*/
+          
+        .instagram-logo {
+            grid-area: instagram-logo;
+        }
+        
+        .instagram-feed {
+            grid-area: instagram-feed;
+        }
+        
+        
+        .article3 {
+            grid-area: article3;
+            color: #333;
+        }
+        
+       .footer {
+            background-color: #000;
+            color: #999;
+            text-align: center;
+            padding: 50px 20px 100px;
+        }
+        
+        
+        @media screen and (max-width: 1200px) {
+            .container1 {
+            width: 100%;
+                
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 20% 20% 20% 20% auto;
+            grid-template-areas:
+                /*". . . . ."*/
+                "opening-times opening-times opening-times opening-times opening-times"
+                "header header header header header";
+                
+            }
+            /*.article2 {
+                column-count: 1;
+            }*/
+            .container2 {
+                width: 100%;
+                margin: 0 auto;
+                /*margin-top: 500px;*/
+                grid-template-rows: auto;
+                grid-template-columns: 50% 50%;
+                grid-template-areas: "instagram-logo instagram-logo" "instagram-feed instagram-feed";
+            }
+            
+            .container3 {
+                width: 80%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: 50% 50%;
+                grid-template-areas: "img1 text1";
+            }
+        
+            .container4 {
+                width: 80%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: 50% 50%;
+                grid-template-areas: "img2 text2";
+            }
+            
+            .message-mob {
+                display:none;
+            }
+            
+            .standout-text-tablet-mob {
+               display:none;
+            }
+            
+            .focus {
+               display:none;
+            }
+        
+            
+            .sitetitle-mob {
+               display:none;
+            }
+        }
+        
+        
+        @media screen and (max-width: 768px) {
+        .container1 {
+            width: 100%;       
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 100%;
+            grid-template-areas:
+                /*"focus"*/
+                "opening-times"
+                "header";                  
+            }
+            
+            .whitebg {
+            /*margin-top: 645.5px;*/
+            margin-top: 420px;
+            padding: 10px 0;
+            /*background-color: #ddd;*/
+            background-color:floralwhite;
+            /*background: rgba(255, 255, 255, 0);*/
+        }
+            
+            .standout2 {
+                    display: none;}
+
+            .container2 {
+                width: 100%;
+                margin-top:100px;
+                background-color:floralwhite;
+                margin: 0 auto;
+                grid-template-rows: auto;
+                grid-template-columns: 100%;
+                grid-template-areas: "instagram-logo" "instagram-feed";
+            }
+            
+            .container3 {
+                width: 100%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: 100%;
+                grid-template-areas: "img1" "text1";
+            }
+        
+            .container4 {
+                width: 100%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: 100%;
+                grid-template-areas: "img2" "text2";
+            }
+            
+            .container5 {
+                width: 100%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: 100%;
+                grid-template-areas: "standout-text-tablet-mob";
+            }
+            
+            .standout-text-tablet-mob {
+               grid-area: standout-text-tablet-mob;
+                color:black;
+            }
+            
+            .standout-text-tablet-mob {
+               display:block;
+            }
+            
+            .focus {
+               display:none;
+            }
+
+            
+            .sitetitle-mob {
+               display:none;
+            }
+        }
+
+        
+        @media screen and (max-width: 480px) {
+            
+        body{
+            /*background:none;
+            background-color: floralwhite;*/
+            }
+            
+            
+            .sitemast {
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 100%;
+            grid-template-areas:
+                "sitetitle-mob";
+        }
+            
+        /*.focus {
+            grid-area: focus;
+            text-align: center;
+            margin-top: 100px;
+        }*/
+            
+        
+            
+        .whitebg {
+            /*margin-top: 645.5px;*/
+            margin-top: 370px;
+            padding: 10px 0;
+            /*background-color: #ddd;*/
+            background-color:floralwhite;
+            /*background: rgba(255, 255, 255, 0);*/
+        }
+            
+        .opening-times p {
+            margin-top: auto;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.1em;
+            color:black;
+            }
+            
+            #heading p {
+            /*margin-top: auto;*/
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.1em;
+            font-weight:100;
+            font-style:normal;
+            font-family: inherit;
+            color:black;
+            }
+            
+            .container1 {
+            width: 100%;
+            margin-bottom: -100px;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 100%;
+            grid-template-areas:    
+                /*"focus"*/
+                "opening-times"
+                "header";
+            
+            }
+            .container2 {
+                width: 100%;
+                margin:auto;
+                grid-template-rows: auto;
+                grid-template-columns: 100%;
+                grid-template-areas: "instagram-logo"
+                    "instagram-feed";
+            }
+            
+            .container3 {
+                width: 100%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: 100%;
+                grid-template-areas: "img1" "text1";
+            }
+        
+            .container4 {
+                width: 100%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: 100%;
+                grid-template-areas: "img2" "text2";
+            }
+            
+            .container5 {
+                width: 100%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: 100%;
+                grid-template-areas: "standout-text-tablet-mob";
+            }        
+            
+            .standout-text-tablet-mob {
+               display:block;
+            }
+            
+            .standout2 {
+                    display: none;}
+            
+            .sitetitle {
+               display:none;
+            }
+            
+            .sitetitle-mob {
+               display:block;
+            }
+        }
+
+
+    </style>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114031748-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114031748-1');
+    </script>
+
+</head>
+
+<body>
+    <!--<div class="sitetitle">
+        <h1>Duddleswell Tea Rooms</h1>
+        
+    </div>-->
+    <div class="sitemast">
+        <div class="sitetitle">
+        <h1>Duddleswell Tea Rooms</h1>
+        </div>
+
+        <div class="sitetitle-mob">
+        <h2>Duddleswell Tea Rooms</h2>
+        </div>     
+    </div>
+    
+    
+    
+    <div class="container1">
+        
+    <!--<div class="focus"><img class="round" src="img/hightea.jpg"></div>-->
+        
+        <div class="standout2">
+            <br>
+            
+            <p><strong>We are open Tuesday-Saturday 10am to 5pm (closed on Sundays and Mondays)</strong>.<br><br>
+            We make all our own home-made scones, cakes and puddings daily, serve loose leaf tea and delicious traditional tearoom dishes.</p>
+        </div>
+        
+        <!--<div class="header">
+            <div id="heading">
+                <p>We make all our own home-made scones, cakes and puddings daily, serve loose leaf tea and delicious traditional tearoom dishes. We believe in using only the best ingredients, like butter and free range eggs.</p>
+            </div>
+        </div>-->
+        
+
+    </div><!-- End of Container 1 -->
+    <div class="whitebg">
+        <div class="container5">
+            <div class="standout-text-tablet-mob">
+            <p><strong>We are open Tuesday-Saturday 10am to 5pm (closed on Sundays and Mondays)</strong>.<br><br>
+            We make all our own home-made scones, cakes and puddings daily, serve loose leaf tea and delicious traditional tearoom dishes. </p> 
+            </div>
+        </div>
+        
+        <div class="container4">
+            <div class="img2"><img src="img/ashdown-forest-winter.jpg" class="ifit"></div>
+            <!--<div class="img2"><img src="img/two.jpg" class="ifit"></div>-->
+            <div class="text2">
+                <p>We are in the heart of beautiful Ashdown Forest with miles of walks right from our door.</p>
+            </div>
+        </div>
+        
+        <div class="container3">
+            <div class="img1"><img src="img/dogs-welcome-800.jpg" class="ifit"></div>
+            <!--<div class="img2"><img src="img/two.jpg" class="ifit"></div>-->
+            <div class="text1">
+                <p>Dogs are very welcome. Free doggy biscuits and water for all our canine customers.</p>
+            </div>
+        </div>
+        
+        <div class="container2">            
+                   
+            <div class="instagram-logo">
+                <a href="https://www.instagram.com/duddleswell/">
+                    <img style="vertical-align:middle" src="img/instagram-glyph-logo2.png" alt="Instagram logo">
+            <p style="display:inline">&nbsp;<strong>Follow us on Instagram</strong><br><br>
+            #duddleswelltearooms #duddleswelldogs</p></a>
+            </div> 
+            
+            <div class="instagram-feed"><!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/7978c50832465fc09f27c9b39f62f492.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe></div>
+        </div>
+         
+        
+        
+    </div>
+    
+
+    <div class="footer">
+        <address>
+Duddleswell Tea Rooms,<br>
+Duddleswell,<br>
+Fern Cottage,<br>
+Near Uckfield,<br>
+East Sussex.<br>
+TN22 3BH<br><br>
+<!--<a href="tel:01825 712126">01825 712126</a>-->
+Tel: 01825 712126
+</address>
+    </div>
+</body>
+
+</html>
