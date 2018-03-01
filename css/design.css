@@ -423,6 +423,15 @@ nav ul li a:hover {
         background-position: top;
             
     }
+            
+    .standout-text-tablet-mob {
+               display:block;
+            }
+            
+     .standout2 {
+            display: none;}
+            
+    
     
     /*background: url(../img/duddle1.jpg) fixed center center;
     background-size: cover;*/
